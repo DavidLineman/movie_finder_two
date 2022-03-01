@@ -1,14 +1,15 @@
 import React from "react";
 
 
-
 class Movie extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  
+
   componentDidMount () {
-    console.log(this.props);
+    console.log(this.props.id);
   }
 
   render() {
@@ -23,5 +24,7 @@ class Movie extends React.Component {
     )
   }
 }
+
+
 
 export default Movie;

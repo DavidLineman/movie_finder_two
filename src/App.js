@@ -17,7 +17,7 @@ const App = () => {
       </nav>
       <Routes>
         <Route path="/" exact element={<Home/>} />
-        <Route path="movie/:id" element={<Movie />} />
+        <Route path="movie/:id" element={<Movie/>} />
         <Route component={NotFound} />
       </Routes>
     </Router>
