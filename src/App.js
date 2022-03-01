@@ -16,8 +16,8 @@ const App = () => {
         <Link className="navbar-brand" to="/">Movie Finder</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/movie/:id" element={<Movie />} />
+        <Route path="/" exact element={<Home/>} />
+        <Route path="movie/:id" element={<Movie />} />
         <Route component={NotFound} />
       </Routes>
     </Router>

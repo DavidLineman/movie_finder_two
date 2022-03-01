@@ -1,12 +1,14 @@
 import React from "react";
 
+
+
 class Movie extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount () {
-    console.log(this.props.match);
+    console.log(this.props);
   }
 
   render() {
