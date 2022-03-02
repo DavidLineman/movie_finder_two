@@ -1,6 +1,5 @@
-import React from "react";
+import React from 'react';
 import { json, checkStatus } from './utils';
-
 
 class Movie extends React.Component {
   constructor(props) {
@@ -10,13 +9,12 @@ class Movie extends React.Component {
     }
   }
 
-  
   componentDidMount () {
-    fetch(`https://www.omdbapi.com/?i=${this.props.match.params.id}&apikey=a46e5ac4`)
+    fetch(`https://www.omdbapi.com/?i=${this.props.match.params.id}&apikey=b7da8d63`)
       .then(checkStatus)
       .then(json)
       .then((data) => {
-        if(data.Response === 'False') {
+        if (data.Response === 'False') {
           throw new Error(data.Error);
         }
 
@@ -37,9 +35,9 @@ class Movie extends React.Component {
     }
 
     const {
-      Title, 
-      Year, 
-      Plot, 
+      Title,
+      Year,
+      Plot,
       Director,
       imdbRating,
       Poster,
@@ -61,7 +59,7 @@ class Movie extends React.Component {
                 <p>Plot: {Plot}</p>
               </li>
               <li>
-                <p>imdbRating: {imdbRating}</p>
+                <p>imdbRating: {imdbRating} / 10</p>
               </li>
             </ul>
           </div>
@@ -73,7 +71,5 @@ class Movie extends React.Component {
     )
   }
 }
-
-
 
 export default Movie;
