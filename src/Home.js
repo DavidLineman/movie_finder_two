@@ -87,7 +87,7 @@ class MovieFinder extends React.Component {
                 value={searchTerm}
                 onChange={this.handleChange}
               />
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary button">Submit</button>
             </form>
             {(() => {
               if (error) {
